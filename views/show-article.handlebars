@@ -1,0 +1,96 @@
+<div class="row text-editor extra-pad extra-pad-form">
+    <div class="twelve columns text-justy">
+
+        <h2 id="center-title">{{article.title}}</h2>
+        <div id="center-author">by: {{article.author}}, created at: {{article.created_at}}</div>
+
+        {{{article.body}}}<br><hr>
+
+        {{#if user.local.username}}
+            <p><a href="/update/{{article.id}}" type="button"  class="button">UPDATE</a></p>
+            <p><a href="/article/{{article.id}}/delete" type="button"  class="button" id="warnbutton" onclick="myFunction()">DELETE</a></p>
+            <p><a href="/article/new" class="button">New article</a></p><br>
+        {{/if}}
+
+        <div id="center-socials">
+            <p>SHARE ME!</p>
+            <a href="#"><img src="../icons/facebook-logo-button.png"></a>
+            <a href="#"><img src="../icons/linkedin-logo.png"></a>
+            <a href="#"><img src="../icons/twitter-logo-silhouette.png"></a>
+        </div><br><br>
+
+        <!--<button id="hide">Hide</button>-->
+        <!--<button id="show">Show</button>-->
+        <!--<div id="comments">-->
+            <!--<p class="animated bounceInUp">Add comment</p>-->
+            <!--<form action="/add-comment" method="post">-->
+
+                <!--<input type="text" name="articleid" value="{{article.id}}" hidden>-->
+                <!--<label for="name">Name</label>-->
+                <!--<input type="text" name="name">-->
+                <!--<label for="comment">Comment</label>-->
+                <!--<textarea name="comment"></textarea><br>-->
+                <!--<button type="submit">Submit</button>-->
+            <!--</form>-->
+        <!--</div>-->
+        <!--<hr>-->
+        <!--{{#each article.comm}}-->
+            <!--&lt;!&ndash;<p><img src="{{picture}}" alt="picture user"></p>&ndash;&gt;-->
+            <!--<p>{{name}} написа:</p>-->
+            <!--<p>"{{comment}}"</p>-->
+
+        <!--{{/each}}-->
+
+        <!--{{#each comments}}-->
+            <!--<p>Потребител: {{name}}</p>-->
+            <!--<p>Коментар: {{ comment}}</p>-->
+            <!--<p>Заглавие{{_article.title}}</p>-->
+            <!--<p>ID {{_article.id}}</p>-->
+
+        <!--{{/each}}-->
+
+        <!--DISQUS-->
+        <div id="disqus_thread"></div>
+
+    </div>
+
+</div>
+
+<script id="dsq-count-scr" src="//deyanode.disqus.com/count.js" async></script>
+<script>
+
+    /**
+     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+
+    /*var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        s.src = 'https://deyanode.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+<script>
+    function myFunction() {
+        document.getElementById("warnbutton").innerHTML = alert('Are you sure???')
+    }
+</script>
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
+<!--<script>-->
+    <!--$(document).ready(function(){-->
+        <!--$("#hide").click(function(){-->
+            <!--$("#comments").hide(1000);-->
+        <!--});-->
+        <!--$("#show").click(function(){-->
+            <!--$("#comments").show(1000);-->
+        <!--});-->
+    <!--});-->
+<!--</script>-->

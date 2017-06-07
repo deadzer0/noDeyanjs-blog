@@ -1,0 +1,64 @@
+<div class="row extra-pad" xmlns="http://www.w3.org/1999/html">
+    <!--local info-->
+    <div class="nine columns text-justy extra-pad-form">
+
+        <h2>Wellcome,
+            {{#if user.local.username }}
+                <strong>{{ user.local.username }}</strong>
+                {{else}}
+                <strong>{{ user.google.name}}</strong>
+            {{/if}}
+        </h2>
+
+        <h3>Profile info</h3>
+        <hr>
+        <p>
+            <strong>ID:</strong> {{user._id}}<br>
+            <strong>username:</strong> {{user.local.username}}<br>
+            <pre><strong>password:</strong> {{user.local.password}}</pre>
+        </p>
+        <hr>
+
+        <!--facebook info-->
+        <h3>Facebook info</h3>
+        <hr>
+        <p>
+            ID: {{user.facebook.id}}<br>
+            emial: {{user.facebook.email}}<br>
+            token: <pre>{{user.facebook.token}}</pre><br>
+            name: {{user.facebook.name}}
+        </p>
+        <hr>
+
+        <!--Google info-->
+        <h3>Google info</h3>
+        <hr>
+        <p>
+            <strong>ID:</strong> {{user.google.id}}<br>
+            <strong>Token:</strong> <pre>{{user.google.token}}</pre><br>
+            <strong>email:</strong> {{user.google.email}}<br>
+            <strong>name:</strong> {{user.google.name}}
+        </p>
+        <hr>
+
+        <!--Api info-->
+        <h3>Api info</h3>
+        <hr>
+        <p>
+            <strong style="color: crimson">You must use this token to access the /testapi</strong><br><br>
+            <strong>Token:</strong>{{user._id}} <br>
+        </p>
+        <hr>
+
+        <a href="/article/new" class="button">New article</a>
+        <hr>
+        <a href="/logout" class="button">LogOut</a>
+    </div>
+
+
+
+
+    <div class="three columns light-gray">
+        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere</p>
+    </div>
+</div>

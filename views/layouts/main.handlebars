@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <title>My responsive wew site</title>
+
+    <meta name="description" content="A personal web site with blog for nodejs tutorials">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Include external CSS. -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.25.0/codemirror.min.css">
+
+    <!-- Include Editor style. -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.6.0/css/froala_editor.pkgd.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.6.0/css/froala_style.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- CSS -->
+    <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/skeleton.css">
+    <link rel="stylesheet" href="../css/animate.css">
+
+    <!-- favicon -->
+    <link rel="icon" type="image/png" href="../images/favicon.png">
+
+</head>
+<body>
+    <div class="container">
+
+        <!-- Header -->
+        <div class="row">
+            <div class="twelve columns head-logo"><img class="animated rotateIn" src="../images/logo.jpg">
+                <h1 class="floater animated flip">Deyan Delev NodeJS tutorials</h1>
+            </div>
+        </div>
+        <!-- end Header -->
+
+        <!-- Navigation menu bar -->
+        <div class="row">
+            <div class="twelve columns">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="/article">Articles</a></li>
+                    <li><a href="/testapi">API</a></li>
+                    <li><a href="/contact">Contacts</a></li>
+                    {{#unless user.local.username}}
+                    <li><a href="/login">Login</a></li>
+                    <li><a href="/signup">Signup</a></li>
+                    {{/unless}}
+                    {{#if user.local.username}}
+                    <li><a href="/logout">Logout</a></li>
+                    <li><a href="/profile" >My Profile</a></li>
+                    <li><a href="#" style="color: crimson">Logged: YES</a></li>
+                {{/if}}
+
+                </ul>
+            </div>
+        </div>
+        <!-- end Navigation menu bar -->
+
+        <!-- Web content -->
+        {{{ body }}}
+        <!-- end Web content-->
+
+        <!--Footer -->
+        <div class="row">
+            <div id="ftime" class="twelve columns">
+                <script>document.write(new Date().getFullYear())</script> &copy
+                <a href="https://www.linkedin.com/in/deyan-delev-79584b119/">Deyan Delev</a>
+            </div>
+        </div>
+        <!--End Footer -->
+
+    </div>
+
+    <!-- Include external JS libs. -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.25.0/codemirror.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.25.0/mode/xml/xml.min.js"></script>
+
+    <!-- Include Editor JS files. -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.6.0/js/froala_editor.pkgd.min.js"></script>
+
+    <!-- Initialize the editor. -->
+
+    <script>
+        $(function() {
+        $('#froala-editor').froalaEditor({
+            heightMin: 400,
+            heightMax: 500
+        }) });
+    </script>
+
+</body>
+</html>

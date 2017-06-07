@@ -1,0 +1,30 @@
+<div class="row extra-pad">
+    <div class="nine columns text-justy">Contact me
+
+        <!-- print the error msg -->
+        {{#if errors}}
+            {{#each errors}}
+                <div style="color: crimson">{{ msg }}</div>
+            {{/each}}
+        {{/if}}
+        <!--end-->
+
+        <!--contact form-->
+        <form action="/contact" method="post">
+            <label>From</label>
+            <input type="text" name="email" placeholder="Type your email...">
+            <label>Subject</label>
+            <input type="text" name="subject" placeholder="Type your email...">
+            <label>Message</label>
+            <textarea name="message" placeholder="Type your message..."></textarea>
+            <br>
+            <button type="submit">Submit</button>
+        </form><hr>
+        <!--end contact form-->
+
+        <p>Need an account? <a href="/signup">Signup</a></p>
+        <p>Or go <a href="/">home</a>.</p>
+
+    </div>
+
+</div>

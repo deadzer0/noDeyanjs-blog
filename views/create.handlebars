@@ -1,0 +1,33 @@
+<div class="row text-editor extra-pad extra-pad-form">
+    <div class="twelve columns text-justy"><h2>Create new article</h2>
+
+        <form action="/article/new" method="post">
+            <label for="title">Title</label>
+            <input type="text" name="title">
+
+            <label for="category">Category</label>
+            <select name="category">
+                <option value="programming">Programming</option>
+                <option value="linux">Linux</option>
+                <option value="desing">Design</option>
+                <option value="testing">Testing</option>
+            </select>
+
+            <label for="tag">Tags</label>
+            <select name="tag">
+                <option value="nodejs">Nodejs</option>
+                <option value="php">PHP</option>
+                <option value="mongodb">MongoDB</option>
+                <option value="mysql">MySQL</option>
+                <option value="express">Express</option>
+                <option value="angular">Angular</option>
+            </select>
+
+            <label for="author">Author</label>
+            <input type="text" value="{{user.local.username}}" name="author">
+            <textarea id="froala-editor" name="body"></textarea><br>
+            <button type="submit">Post</button>
+        </form>
+
+    </div>
+</div>

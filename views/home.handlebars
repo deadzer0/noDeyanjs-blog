@@ -1,0 +1,28 @@
+
+    <div class="row extra-pad extra-pad-form">
+        <div class="nine columns text-justy">
+            {{#if user.local.username}}
+                <br><p><a href="/article/new" class="button">New article</a></p>
+            {{/if}}
+
+            {{#each ret}}
+                <h2 class="animated rubberBand boldy-title"><a href="/article/{{myslug}}">{{title}}</a></h2>
+                <p class="italyc">by: <a href="/profile">{{author}}</a>, at: {{created_at}}</p>
+
+                <p>{{{short}}}...</p>
+                <a href="/article/{{myslug}}" class="button">Read more</a>
+
+                <p>tag: <strong>{{tag}}</strong>, category: <strong>{{category}}</strong></p><hr>
+            {{/each}}
+            <hr>
+        </div>
+
+        <div class="three columns light-gray">
+            <h3 id="aside-counter">{{ret.dataB}} articles</h3>
+            <hr>
+            {{#each ret}}
+                <p><a href="/article/{{myslug}}">{{title}}</a></p>
+            {{/each}}
+        </div>
+
+    </div>

@@ -1,0 +1,16 @@
+
+    <div class="row text-editor extra-pad extra-pad-form">
+        <div class="twelve columns text-justy"><h2>Update article</h2>
+
+            <form action="/update/{{article.id}}" method="post">
+                <label for="title">Title</label>
+                <input type="text" value="{{article.title}}" name="title">
+                <label for="author">Author</label>
+                <input type="text" value="{{article.author}}" name="author">
+                <textarea id="froala-editor" name="body">{{{article.body}}}</textarea>
+                <br>
+                <button type="submit">Update</button>
+            </form>
+
+        </div>
+    </div>

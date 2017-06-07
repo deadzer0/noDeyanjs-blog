@@ -1,0 +1,14 @@
+<div class="row text-editor extra-pad extra-pad-form">
+    <div class="twelve columns text-justy">
+
+        {{#each articles}}
+            <h2 id="center-title"><a href="/article/{{myslug}}">{{title}}</a></h2>
+            <div id="center-author">by {{author}}, {{created_at}}</div>
+
+            <p>{{{short}}}...</p>
+            <a href="/article/{{myslug}}" class="button">Read more</a>
+            <hr>
+        {{/each}}
+
+    </div>
+</div>
