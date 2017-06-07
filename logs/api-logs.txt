@@ -1,14 +1,2 @@
-/testapi token: 592948efae66b8218c1b4fe3, at 13:45:46, 7-5-2017
-/testapi token: undefined, at 13:48:43, 7-5-2017
-/article/new token: undefined, at 13:50:52, 7-5-2017
-/article/new token: undefined, at 13:53:6, 7-5-2017
-/article/new token: undefined, at 13:53:24, 7-5-2017
-/article/new token: undefined, at 13:54:26, 7-5-2017
-/article/new token: undefined, at 13:54:41, 7-5-2017
-/article/new token: undefined, at 13:55:42, 7-5-2017
-/article/gimp-free-alternative-to-photo-hop token: undefined, at 13:55:45, 7-5-2017
-/update/5937dbae29b9af2ca31abe67 token: undefined, at 13:56:4, 7-5-2017
-/update/5937dbae29b9af2ca31abe67 token: undefined, at 13:56:18, 7-5-2017
-/article/gimp-free-alternative-to-photo-hop token: undefined, at 13:56:21, 7-5-2017
-/testapi token: undefined, at 13:56:51, 7-5-2017
-/testapi token: 592948efae66b8218c1b4fe3, at 13:56:58, 7-5-2017
+/testapi token: 592948efae66b8218c1b4fe4, at 13:45:46, 7-5-2017
+/testapi token: 592948efae66b8218c1b4fe4, at 13:56:58, 7-5-2017
